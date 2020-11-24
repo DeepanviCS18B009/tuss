@@ -19,9 +19,13 @@ from Discussion_Forum.views import *
  
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',index,name='index'),
+    path('',index,name="index"),
+    path('index/',index,name='index'),
     path('main/',main,name='main'),
     path('home/',home,name='home'),
+    path('box_one/',box_one,name = "box_one"),
+    path('box_two/',box_two,name = "box_two"),
+    path('box_three/',box_three,name = "box_three"),
     path('addInForum/',addInForum,name='addInForum'),
     path('addInDiscussion/',addInDiscussion,name='addInDiscussion'),
     path('',include("Discussion_Forum.urls")),

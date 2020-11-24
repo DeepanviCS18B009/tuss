@@ -8,7 +8,16 @@ def index(request):
 
 def main(request):
     return render(request,'main.html')
-     
+
+def box_one(request):
+    return render(request,'box_one.html')
+
+def box_two(request):
+    return render(request,'box_two.html')
+
+def box_three(request):
+    return render(request,'box_three.html')
+
 def home(request):
     forums=forum.objects.all()
     count=forums.count()
