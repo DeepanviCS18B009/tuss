@@ -5,7 +5,9 @@ class CreateInForum(ModelForm):
     class Meta:
         model= forum
         fields = "__all__"
- 
+       # widgets = {
+        #    '__all__': form.TextInput(attrs={'class': 'mycssclass'}),
+       # }
 class CreateInDiscussion(ModelForm):
     class Meta:
         model= Discussion

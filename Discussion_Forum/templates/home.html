@@ -35,6 +35,12 @@
       color: #42585f;
       transition: .5s;
     }
+
+    button:hover{
+      background: none;
+      color: #42585f;
+      transition: .5s;
+    }
   </style>
 </head>
 
@@ -53,37 +59,39 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
+      <div class="collapse navbar-collapse"></div> 
+
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav nav nav-center">
           <li class="nav-item">
-            <a class="nav-link" href="http://127.0.0.1:8000/main">Home</a>
+            <a class="nav-link px-5" href="http://127.0.0.1:8000/main">Home</a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="#">Forum <span class="sr-only">(current)</span></a>
+            <a class="nav-link px-5" href="#" style="color: #35c0ed;">Forum <span class="sr-only">(current)</span></a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact Us</a>
+            <a class="nav-link px-5" href="#">Contact Us</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Info</a>
+            <a class="nav-link px-5" href="#">Info</a>
           </li>
 
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+        
       </div>
     </nav>
-
-    <h2 class="jumbotron">
-      Currently active forums: {{count}}
+    <!--<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 offset-3 float-md-center">  -->
+    <h2 class="jumbotron jumbotron-fluid" style="height: 70px; background-color: #35c0ed; font-size: 30px; text-align: center;">
+       {{count}} people shared their story. It's your turn to share yours.
+      
       <form method="POST" action="{% url 'addInForum' %}">
         {% csrf_token %}
-        <button class="btn btn-success" style="width:fit-content; padding: 4px; margin:10px;">Add more</button>
+        <button class="btn btn-success" style="width:fit-content; padding: 8px; margin:20px; 
+        background-color: #000000; color: #ffffff;">Add New Forum</button>
       </form>
     </h2>
+   <!--  </div>  -->
     <div class="card-columns" style="padding: 10px; margin: 20px;"></div>
 
 
@@ -92,16 +100,17 @@
     <div class="card box container">
       <br>
       <h5 class="card-title">
-        <a href='{{forum.link}}'>
+        
           <h3>{{forum.topic}}</h3>
-        </a>
+        
         <div class="card-body container">
           <p>{{forum.description}}</p>
+          
       </h5>
       <hr>
       <p> By: {{forum.name}}</p>
-      email- {{forum.email}}
       <hr>
+     
       <h4>Comments</h4>
       {%for discuss in discussions%}
       {%for objs in discuss%}
@@ -113,7 +122,8 @@
       {%endfor%}
       <form method="POST" action="{% url 'addInDiscussion' %}">
         {% csrf_token %}
-        <button class="btn btn-success" style="width:fit-content; padding: 4px; margin:10px;">Comment</button>
+        <button class="btn btn-success" style="width:fit-content; padding: 4px; margin:10px;
+         background-color: #000000; color: #ffffff;">Comment</button>
       </form>
 
     </div>

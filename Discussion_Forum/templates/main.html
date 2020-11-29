@@ -21,7 +21,9 @@
         crossorigin="anonymous"></script>
 
     <style>
-        body {font-family: "Lato", sans-serif}
+        body {
+            font-family: "Lato", sans-serif
+        }
 
         .navbar-custom {
             background-color: #000000;
@@ -46,10 +48,29 @@
             transition: .5s;
         }
 
+        div div a:hover {
+            background: none;
+            color: #42585f;
+            transition: .5s;
+        }
+
         div div p {
             color: #000000;
 
         }
+
+         div.background {
+  background-image: url("{% static 'hands.jpg' %}");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  width: 100%;
+
+}
+div.card-columns {
+    margin-top: 30px;
+}   
     </style>
 </head>
 
@@ -70,7 +91,7 @@
             </button>
 
             <div class="collapse navbar-collapse float-md-center" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
+                <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
                         <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
                     </li>
@@ -140,61 +161,122 @@
             </a>
         </div>
         <div style="background:transparent !important" class="jumbotron">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 offset-3 float-md-center">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 offset-3 float-md-center" 
+            style="height: 100px;">
                 <h1 class="display-4" style="font-size: 50px;">Break your cage!</h1>
                 <p class="lead" style="font-size: 20px;">Sign In to write to us your story anonymously so the world can
                     see it and find it inspiring.</p>
             </div>
         </div>
 
-
-
         <div class="container">
-            <h2>Article Deck</h2>
-            <p>Check out some of the articles on gender inequalities often seen around us.</p>
+            <h1>Article Deck</h1>
             <p></p>
             <div class="card-deck">
-                <div class="card" style="background-color: #35c0ed; border: 2px solid #000000;">
+                <div class="card" style="background-color: #000000; border: 2px solid #000000;">
                     <div class="card-body text-center">
-                        <h5 class="card-title">Gender equality is the goal, while gender equity is a practice</h5>
-                        <p class="card-text">Gender equality, also known as sexual equality or equality of the sexes, is
+                        <h5 class="card-title" style="color: #ffffff">Gender equality is the goal, while gender equity is a practice</h5>
+                        <p class="card-text" style="color: #ffffff">Gender equality, also known as sexual equality or equality of the sexes, is
                             the
                             state of equal ease of access to resources and opportunities regardless of gender, including
                             economic participation and....</p>
                         <a href="http://127.0.0.1:8000/box_one" class="btn"
-                            style="background-color: #000000; color:#ffffff">Full Article Here</a>
+                            style="background-color: #ffffff; color:#000000">Full Article Here</a>
                     </div>
                 </div>
-                <div class="card" style="background-color: #ffffff; border: 2px solid #000000;">
+                <div class="card" style="background-color:  #000000; border: 2px solid #000000;">
                     <div class="card-body text-center">
-                        <h5 class="card-title">The Gender pay gap</h5>
-                        <p class="card-text">Across the board, a number of industries are stratified across the genders.
+                        <h5 class="card-title" style="color: #ffffff">The Gender pay gap</h5>
+                        <p class="card-text" style="color: #ffffff">Across the board, a number of industries are stratified across the genders.
                             This is the result of a variety of factors. These include differences in education choices,
                             preferred job... </p>
                         <a href="http://127.0.0.1:8000/box_two" class="btn"
-                            style="background-color: #000000; color:#ffffff">Full Article Here</a>
+                            style="background-color: #ffffff; color:#000000">Full Article Here</a>
 
                     </div>
                 </div>
-                <div class="card" style="background-color: #35c0ed; border: 2px solid #000000;">
+                <div class="card" style="background-color: #000000; border: 2px solid #000000;">
                     <div class="card-body text-center">
-                        <h5 class="card-title">70 percent of women don’t complain of workplace sexual harassment: NCW
+                        <h5 class="card-title" style="color: #ffffff">70 percent of women don’t complain of workplace
+                            sexual harassment: NCW
                         </h5>
-                        <p class="card-text">About 70 percent of women who perceive sexual harassment at the workplace
+                        <p class="card-text" style="color: #ffffff;">About 70 percent of women who perceive sexual
+                            harassment at the workplace
                             do not complain, National Commission for Women (NCW) member-secretary Satbir Bedi said here
                             today. Bedi was speaking at... </p>
                         <a href="http://127.0.0.1:8000/box_three" class="btn"
-                            style="background-color: #000000; color:#ffffff">Full Article Here</a>
+                            style="background-color: #ffffff; color:#000000">Full Article Here</a>
                     </div>
                 </div>
 
             </div>
         </div>
-        <p>nvkdnvejfwenvdvnaavkavavvnmrbmbvmfqdwdonvkdnvejfwenvdvnaavkavavvnmrbmbvmfqdwdonvkdnvejfwenvdvnaavkavavvnmrbmbvmfqdwdonvkdnvejfwenvdvnaavkavavvnmrbmbvmfqdwdo
-            nvkdnvejfwenvdvnaavkavavvnmrbmbvmfqdwdonvkdnvejfwenvdvnaavkavavvnmrbmbvmfqdwdonvkdnvejfwenvdvnaavkavavvnmrbmbvmfqdwdonvkdnvejfwenvdvnaavkavavvnmrbmbvmfqdwdo
-            nvkdnvejfwenvdvnaavkavavvnmrbmbvmfqdwdonvkdnvejfwenvdvnaavkavavvnmrbmbvmfqdwdonvkdnvejfwenvdvnaavkavavvnmrbmbvmfqdwdonvkdnvejfwenvdvnaavkavavvnmrbmbvmfqdwdo
-            nvkdnvejfwenvdvnaavkavavvnmrbmbvmfqdwdonvkdnvejfwenvdvnaavkavavvnmrbmbvmfqdwdo
-        </p>
+
+        <div class="background">
+            <div class="card-columns">
+
+                <div class="card-transparent p-3" style="border: none;">
+                    <blockquote class="blockquote mb-0 card-body">
+                        <p>"Being gay is like being left handed. Some people are,
+                            most people aren’t and nobody really knows why. It’s not right or wrong,
+                            it’s just the way things are!"</p>
+                       
+                    </blockquote>
+                </div>
+                <div class="card-transparent">
+                    <div class="card-body">
+                        <p>.</p>
+                    </div>
+
+                </div>
+                    
+                
+                <div class="card-transparent p-3" style="border: none;">
+                    <blockquote class="blockquote mb-0 card-body">
+                        <p>“Certain sections of our society have been living in shackles of exclusion.
+                            We have to vanquish prejudice and embrace inclusion and ensure equal rights. ”</p>
+                        <footer class="blockquote-footer text-black">
+                            <small>
+                                Ex-CJI Dipak Misra on <cite title="Source Title">Section 377 Verdict</cite>
+                            </small>
+                        </footer>
+                    </blockquote>
+                </div>
+
+                <div class="card-transparent text-center">
+                    <div class="blockquote mb-0 card-body">
+                        <p class="card-text">"YOU don't have to be GAY to be a supporter.....YOU just have to be a
+                            HUMAN"
+                        </p>
+                        
+                    </div>
+                </div>
+
+                <div class="card-transparent p-3 text-right">
+                    <blockquote class="blockquote mb-0">
+                        <p>"What is straight? A line can be straight, or a street, but the human
+                            heart, oh, no, it's curved like a road through mountains."</p>
+                        <footer class="blockquote-footer">
+                            <small class="text-muted">
+                                Tennessee Williams
+                            </small>
+                        </footer>
+                    </blockquote>
+                </div>
+                <div class="card-transparent p-3" style="border: none;">
+                    <blockquote class="blockquote mb-0 card-body">
+                        <p class="card-text">"Love is too beautiful to be kept hidden in a closet."</p>
+                    </blockquote>
+
+
+                </div>
+                
+            </div>
+        </div>
+        
+
+
+
 
     </body>
 

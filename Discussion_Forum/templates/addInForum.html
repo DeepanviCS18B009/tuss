@@ -5,78 +5,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" 0>
+
     <style>
         body {font-family: "Lato", sans-serif}
 
         form {
             border: 4px solid black;
             margin: 0 auto;
-            padding: 40px;
-            width: fit-content;
-        }
+            width: 60%;
+            padding: 20px;
 
+        }
+        .mycssclass {
+    height: 100px;
+}
         .navbar-custom {
-            background-color: #000000;
-        }
+      background-color: #000000;
+    }
 
-        nav div ul li a {
-            color: #ffffff;
-            font-size: 17px;
-            text-transform: uppercase;
-            padding: 7px 13px;
-            border-radius: 3px;
+    nav div ul li a {
+      color: #ffffff;
+      font-size: 17px;
+      text-transform: uppercase;
+      padding: 7px 13px;
+      border-radius: 3px;
 
-        }
+    }
 
-        a:hover {
-            background: none;
-            color: #42585f;
-            transition: .5s;
-        }
+    a:hover {
+      background: none;
+      color: #42585f;
+      transition: .5s;
+    }
+    .navbar {
+  margin-bottom: 20px;
+}
+        
     </style>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" 0>
-
+    
 </head>
 
 <body style="background-color:#35c0ed;">
     <nav class="navbar navbar-expand-lg navbar-custom sticky-top">
-        <a class="navbar-brand" href="http://127.0.0.1:8000/index">
-            <source src="{% static 'name.png' %}">
-            <img src="{% static 'name.png' %}" width="90" height="40" class="d-inline-block align-top" alt=""
-                loading="lazy">
+      <a class="navbar-brand" href="http://127.0.0.1:8000/index">
+        <source src="{% static 'name.png' %}">
+        <img src="{% static 'name.png' %}" width="90" height="40" class="d-inline-block align-top" alt=""
+          loading="lazy">
 
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="http://127.0.0.1:8000/main">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="http://127.0.0.1:8000/home">Forum</a>
-                </li>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="http://127.0.0.1:8000/main">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="http://127.0.0.1:8000/home">Forum</a>
+          </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact Us</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Info</a>
-                </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Info</a>
+          </li>
 
-            </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
-        </div>
+        </ul>
+        
+      </div>
     </nav>
+   
+    <div class="alert alert-primary" role="alert" style="width: 500px; margin-left: 35%; text-align: center; position: static;" >
+         Please use anonymous name to not disclose your identity 
+      </div>
+      {%load crispy_forms_tags %}
     <form action="{% url 'addInForum' %}" method="POST">
         {% csrf_token %}
-        {{form.as_p}}
-        <input type="submit" class="btn btn-success" value="submit">
+
+        {{form|crispy}}
+        <input type="submit" class="btn btn-success" value="Submit" style="background-color: #000000; color: #ffffff;margin:5px; ">
+        
     </form>
